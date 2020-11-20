@@ -6,6 +6,11 @@ The model is not a "grammar checker" or equivalent, and it is subject-matter agn
 
 ### About the dataset:
 
+Three datasets are used and referenced herein: 
+   writingcsv.csv is the first corpus of texts from multiple sources (n=188)
+   writingcsv2.csv is the single-source corpus targeted to meet the Common Core standards (n=100)
+   writingcsv2_combined is the combined corpus (n=288)
+
 Writing samples in the dataset were obtained from several different sources and comprise many different types. Some sources had corrected obvious misspellings, so obvious misspellings were corrected in the remaining texts for consistency. Bibliographies from research papers were not included.  Sources varied, though the vast majority of texts were obtained from https://achievethecore.org, https://k12.thoughtfullearning.com, and http://www.ttms.org. Licensure and copyright information for the texts may be viewed on each site. 
 
 The models were run three times on the three "groups" of data to examine the efficacy of the models as the corpus size increased: the first set was gathered from a number of sources; the second was gathered from a single source; and the third was a combination of both. 

@@ -19,7 +19,7 @@ The models were run three times on the three "groups" of data to examine the eff
 
 Initial EDA revealed that the average number of words per text increased as grade level increased. Middle-school and high-school distributions were very close, as shown below, though high-school texts had broader dispersion, likely due to the different types of texts. 
 
-<img src="https://github.com/jnels13/Screening-Childrens-Writing-Level-With-NLP/blob/main/Source%20Images/3_numwords.png" width="320" height="258">
+<img src="https://github.com/jnels13/Screening-Childrens-Writing-Level-With-NLP/blob/main/Source%20Images/3_numwords.png" width="592" height="413">
 
 Similarly, average word length per text was correlated with increase in grade level, in all three data-set groups. The differences were negligible, though less so in the second, single-source group.  After lemmatization and stop-word removal, the differences between the top two groupings (middle and high school) are nearly gone, though the differences between the lower grades remain largely the same.
 

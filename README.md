@@ -23,11 +23,11 @@ Initial EDA revealed that the average number of words per text increased as grad
 
 Similarly, average word length per text was correlated with increase in grade level, in all three data-set groups. The differences were negligible, though less so in the second, single-source group.  After lemmatization and stop-word removal, the differences between the top two groupings (middle and high school) are nearly gone, though the differences between the lower grades remain largely the same.
 
-**Group 1:
+<bf>Group 1:
 <img src="https://github.com/jnels13/Screening-Childrens-Writing-Level-With-NLP/blob/main/Source%20Images/1_wordlen.png">
 Group 2:
 <img src="https://github.com/jnels13/Screening-Childrens-Writing-Level-With-NLP/blob/main/Source%20Images/2_wordlen.png">
-Group 3 (Combined): **
+Group 3 (Combined): </bf>
 <img src="https://github.com/jnels13/Screening-Childrens-Writing-Level-With-NLP/blob/main/Source%20Images/3_wordlen.png">
 
 ### Model Development

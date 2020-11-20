@@ -2,6 +2,8 @@
 
 This model is a proof-of-concept deep-learning model to assess student writing level based upon a corpus of previously categorized texts. Given the size of the available corpus and that some texts had been attributed to multiple grades, texts were grouped into the following grade-level categories: early elementary (k-2), middle-elementary (3-4), middle school (5-8) and high school (9-12). 
 
+The model is not a "grammar checker" or equivalent, and it is subject-matter agnostic. It exclusively classifies a given text based upon a corpus of previously graded materials. 
+
 ### About the dataset:
 
 Writing samples in the dataset were obtained from several different sources and comprise many different types. Some sources had corrected obvious misspellings, so obvious misspellings were corrected in the remaining texts for consistency. Bibliographies from research papers were not included.  Sources varied, though the vast majority of texts were obtained from https://achievethecore.org, https://k12.thoughtfullearning.com, and http://www.ttms.org. Licensure and copyright information for the texts may be viewed on each site. 
@@ -41,7 +43,7 @@ The initial models improved overall as the corpus size increased, as shown by th
 
 The best-performing model was XGBoost using TF-IDF weights. It can correctly classify texts roughly twice as good as the baseline, with an accuracy of 62.069 and an F1 score of 60.433.  
 
-Texts may be uploaded directly into the notebook, though this will soon be transferred to a stand-alone app.  Further work includes updating the corpus size as additional texts become available, and deploying to a stand-alone app. 
+Texts may be uploaded directly into the notebook, though this will soon be transferred to a stand-alone app.  Further work includes updating the corpus size as additional texts become available, and deploying to a stand-alone app. The source data should also be checked for potential bias in its origin, and thus, in its application; that goes beyond the scope of this initial developed model.
 
 ### Further Reading
 

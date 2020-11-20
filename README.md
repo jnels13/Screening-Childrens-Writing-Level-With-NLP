@@ -48,7 +48,7 @@ Some of the initial models improved overall as the corpus size increased, as sho
 
 The best-performing model was XGBoost using TF-IDF weights, and it clearly improved in performance as corpus size increased. It can correctly classify texts roughly twice as good as the baseline, with an accuracy of 62.069 and an F1 score of 60.433. Presumably, the accuracy/F1 will increase (at least to some degree) as the corpus size increases.
 
-Texts may be uploaded directly into the notebook, though this will soon be transferred to a stand-alone app.  Further work includes updating the corpus size as additional texts become available, and deploying to a stand-alone app. The source data should also be checked for potential bias in its origin, and thus, in its application; that goes beyond the scope of this initial developed model.
+Texts may be pasted directly into the notebook, though this will soon be transferred to a stand-alone app.  Further work includes updating the corpus size as additional texts become available, and deploying to a stand-alone app. The source data should also be checked for potential bias in its origin, and thus, in its application; that goes beyond the scope of this initial developed model.
 
 ### Further Reading
 

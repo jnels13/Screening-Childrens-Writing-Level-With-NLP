@@ -37,11 +37,11 @@ Three models were used: support-vector machine, random forest, and XG Boost.  Th
 
 ### Results
 
-The initial models improved overall as the corpus size increased, as shown by the F1 scores below:
+Some of the initial models improved overall as the corpus size increased, as shown by the F1 scores below:
 
 <img src="https://github.com/jnels13/Screening-Childrens-Writing-Level-With-NLP/blob/main/Source%20Images/F1_Scores.png">
 
-The best-performing model was XGBoost using TF-IDF weights. It can correctly classify texts roughly twice as good as the baseline, with an accuracy of 62.069 and an F1 score of 60.433.  
+The best-performing model was XGBoost using TF-IDF weights, and it clearly improved in performance as corpus size increased. It can correctly classify texts roughly twice as good as the baseline, with an accuracy of 62.069 and an F1 score of 60.433. Presumably, the accuracy/F1 will increase (at least to some degree) as the corpus size increases.
 
 Texts may be uploaded directly into the notebook, though this will soon be transferred to a stand-alone app.  Further work includes updating the corpus size as additional texts become available, and deploying to a stand-alone app. The source data should also be checked for potential bias in its origin, and thus, in its application; that goes beyond the scope of this initial developed model.
 

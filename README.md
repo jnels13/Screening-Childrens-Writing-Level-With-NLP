@@ -7,9 +7,9 @@ The model is not a "grammar checker" or equivalent, and it is subject-matter agn
 ### About the dataset:
 
 Three datasets are used and referenced herein: 
-<br>writingcsv.csv is the first corpus of texts from multiple sources (n=188)
-<br>writingcsv2.csv is the single-source corpus targeted to meet the Common Core standards (n=100)
-<br>writingcsv2_combined is the combined corpus (n=288)
+<br>> writingcsv.csv is the first corpus of texts from multiple sources (n=188)
+<br>>writingcsv2.csv is the single-source corpus targeted to meet the Common Core standards (n=100)
+<br>>writingcsv2_combined is the combined corpus (n=288)
 
 Writing samples in the dataset were obtained from several different sources and comprise many different types. Some sources had corrected obvious misspellings, so obvious misspellings were corrected in the remaining texts for consistency. Bibliographies from research papers were not included.  Sources varied, though the vast majority of texts were obtained from https://achievethecore.org, https://k12.thoughtfullearning.com, and http://www.ttms.org. Licensure and copyright information for the texts may be viewed on each site. 
 
@@ -23,11 +23,11 @@ Initial EDA revealed that the average number of words per text increased as grad
 
 Similarly, average word length per text was correlated with increase in grade level, in all three data-set groups. The differences were negligible, though less so in the second, single-source group.  After lemmatization and stop-word removal, the differences between the top two groupings (middle and high school) are nearly gone, though the differences between the lower grades remain largely the same.
 
-Group 1:
+**Group 1:
 <img src="https://github.com/jnels13/Screening-Childrens-Writing-Level-With-NLP/blob/main/Source%20Images/1_wordlen.png">
 Group 2:
 <img src="https://github.com/jnels13/Screening-Childrens-Writing-Level-With-NLP/blob/main/Source%20Images/2_wordlen.png">
-Group 3 (Combined): 
+Group 3 (Combined): **
 <img src="https://github.com/jnels13/Screening-Childrens-Writing-Level-With-NLP/blob/main/Source%20Images/3_wordlen.png">
 
 ### Model Development

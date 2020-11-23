@@ -42,7 +42,7 @@ Standard preprocessing included tokenization of the texts, removal of English st
 
 #### Model Selection
 
-Three models were used: support-vector machine, random forest, and XG Boost.  The SVM and XGB were both tuned with .  A dummy classifier was used to evaluate the modes' performance over baseline.  The data was applied to each utilizing two strategies for categorizing the data: TF-IDF weighing and Word2vec vectorization.  SMOTE was used to account for class imbalance. 
+Three models were used: support-vector machine, random forest, and XG Boost. All models used a randomized search to tune the parameters, and a dummy classifier was used to evaluate the modes' performance over baseline.  The data was applied to each utilizing two strategies for categorizing the data: TF-IDF weighing and Word2vec vectorization.  SMOTE was used to account for class imbalance. 
 
 ### Results
 

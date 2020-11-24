@@ -46,7 +46,7 @@ Three models were used: support-vector machine, random forest, and XG Boost. All
 
 Some of the initial models improved overall as the corpus size increased, as shown by the F1 scores below:
 
-<img src="https://github.com/jnels13/Screening-Childrens-Writing-Level-With-NLP/blob/main/Source%20Images/F1_Scores.png">
+<img src="https://github.com/jnels13/Screening-Childrens-Writing-Level-With-NLP/blob/main/Source%20Images/Accuracy_Scores.png">
 
 The best-performing model was the Random Forest using TF-IDF weights (63.218% accuracy, 58.674 F1 score), and it clearly improved in performance as corpus size increased. It can correctly classify texts roughly twice as good as the baseline (32.184% accuracy). The best Word2vec model was XGBoost, with 50.575% accuracy and a 50.282 F1 score.
 

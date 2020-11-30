@@ -2,7 +2,7 @@
 
 This model is a proof-of-concept machine-learning model to assess student writing level based upon a corpus of previously categorized texts. Given the size of the available corpus and that some texts had been attributed to multiple grades, texts were grouped into the following grade-level categories: early elementary (k-2), middle-elementary (3-4), middle school (5-8) and high school (9-12). 
 
-The model is not a "grammar checker" or equivalent, and it is subject-matter agnostic. It exclusively classifies a given text based upon a corpus of previously graded materials. 
+The model is not a "grammar checker" or equivalent, and it is subject-matter agnostic. It exclusively classifies a given text based upon a corpus of previously graded materials. The repository includes the notebook, the datasets described below, a high-level overview of the project (the PDF document), and the source images referenced herein. 
 
 ### About the dataset:
 
@@ -30,7 +30,7 @@ Further, the actual words used across the different grade-groups may be viewed i
 
 <img src="https://github.com/jnels13/Screening-Childrens-Writing-Level-With-NLP/blob/main/Source%20Images/wc_5.png" width="370" height="258"> <img src="https://github.com/jnels13/Screening-Childrens-Writing-Level-With-NLP/blob/main/Source%20Images/wc_9.png" width="370" height="258">
 
-Themes repeat across grade-groups, such as "dog" and "cat" decreassing in frequency after the early grades, "time" growing in frequency through the different grade groups, and "mom" becoming "mother" in high school.  The repetition of words across grade groups from the youngest to the eldest students is also interesting. 
+Themes repeat across grade-groups, such as "dog" and "cat" decreasing in frequency after the early grades, "time" growing in frequency through the different grade groups, and "mom" becoming "mother" in high school.  The repetition of words across grade groups from the youngest to the eldest students is also interesting. 
 
 ### Model Development
 
@@ -48,7 +48,7 @@ Some of the initial models improved overall as the corpus size increased, as sho
 
 <img src="https://github.com/jnels13/Screening-Childrens-Writing-Level-With-NLP/blob/main/Source%20Images/Accuracy_Scores.png">
 
-The best-performing model was the Random Forest using TF-IDF weights (63.218% accuracy, 58.674 F1 score), and it clearly improved in performance as corpus size increased. It can correctly classify texts roughly twice as good as the baseline (32.184% accuracy). The best Word2vec model was XGBoost, with 50.575% accuracy and a 50.282 F1 score.
+The best-performing model was the Random Forest using TF-IDF weights (63.218% accuracy, 58.674 F1 score), and it clearly improved in performance as corpus size increased. It can correctly classify texts roughly twice as good as the baseline (which was 32.184% accuracy). The best Word2vec model was XGBoost, with 50.575% accuracy and a 50.282 F1 score.
 
 Texts may be pasted directly into the notebook, though this will soon be transferred to a stand-alone app.  Further work includes updating the corpus size as additional texts become available, and deploying to a stand-alone app. The source data should also be checked for potential bias in its origin, and thus, in its application; that goes beyond the scope of this initial developed model.
 

@@ -2,7 +2,7 @@
 
 This model is a proof-of-concept machine-learning model to assess student writing level based upon a corpus of previously categorized texts. Given the size of the available corpus and that some texts had been attributed to multiple grades, texts were grouped into the following grade-level categories: early elementary (k-2), middle-elementary (3-4), middle school (5-8) and high school (9-12). 
 
-The model is not a "grammar checker" or equivalent, and it is subject-matter agnostic. It exclusively classifies a given text based upon a corpus of previously graded materials. The repository includes the notebook, the datasets described below, a high-level overview of the project (the PDF document), and the source images referenced herein. 
+The model is not a "grammar checker," and it is subject-matter agnostic. It only classifies a given text based upon a corpus of previously graded materials. The repository includes the notebook, the datasets described below, a high-level overview of the project (the PDF document), and the source images referenced herein. 
 
 ### About the dataset:
 
@@ -45,13 +45,13 @@ Three models were used: support-vector machine, random forest, and XG Boost. All
 
 ### Results
 
-Some of the initial models improved overall as the corpus size increased, as shown by the F1 scores below:
+Performance of the models did not significantly change with increase in corpus size (perhaps due to the still-limited size of the corpus), as indicated by the accuracy scores below:
 
 <img src="https://github.com/jnels13/Screening-Childrens-Writing-Level-With-NLP/blob/main/Source%20Images/Accuracy_Scores.png">
 
-The best-performing model was the Random Forest using TF-IDF weights (63.218% accuracy, 58.674 F1 score), and it clearly improved in performance as corpus size increased. It can correctly classify texts roughly twice as good as the baseline (which was 32.184% accuracy). The best Word2vec model was XGBoost, with 50.575% accuracy and a 50.282 F1 score.
+The best-performing model was the Random Forest using TF-IDF weights (60.92% Accuracy, 54.095 F1 score), and it clearly improved in performance as corpus size increased. It can correctly classify texts roughly twice as good as the baseline (34.483%). The best Word2vec model was SVM (51.724% accuracy, 48.871 F1 score).
 
-Texts may be pasted directly into the notebook, though this will soon be transferred to a stand-alone app.  Further work includes updating the corpus size as additional texts become available, and deploying to a stand-alone app. The source data should also be checked for potential bias in its origin, and thus, in its application; that goes beyond the scope of this initial developed model.
+Texts may be pasted directly into the notebook, though this will soon be transferred to a stand-alone app.  Further work includes continuing to increase the corpus size as additional texts become available, and deploying to a stand-alone app. The source data should also be checked for potential bias in its origin, and thus, in its application; that goes beyond the scope of this initial developed model.
 
 ### Further Reading
 

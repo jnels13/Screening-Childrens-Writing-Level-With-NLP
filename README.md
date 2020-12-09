@@ -7,9 +7,9 @@ The model is not a "grammar checker" or equivalent, and it is subject-matter agn
 ### About the dataset:
 
 Three datasets are used and referenced herein: 
-<br>> writingcsv.csv is the first corpus of texts from multiple sources (n=188)
+<br>> writingcsv.csv is the first corpus of texts from multiple sources (n=189)
 <br>> writingcsv2.csv is the single-source corpus targeted to meet the Common Core standards (n=100)
-<br>> writingcsv2_combined is the combined corpus (n=288)
+<br>> writingcsv2_combined is the combined corpus (n=289)
 
 Writing samples in the dataset were obtained from several different sources and comprise many different types. Some sources had corrected obvious misspellings, so obvious misspellings were corrected in the remaining texts for consistency. Bibliographies from research papers were not included.  Sources varied, though the vast majority of texts were obtained from https://achievethecore.org (comprising the second set, n=100), https://k12.thoughtfullearning.com, and http://www.ttms.org. Licensure and copyright information for the texts may be viewed on each site. 
 
@@ -24,13 +24,14 @@ Similarly, average word length per text was correlated with increase in grade le
 **Group 3 (Combination of Previous Two):** 
 <img src="https://github.com/jnels13/Screening-Childrens-Writing-Level-With-NLP/blob/main/Source%20Images/3_wordlen.png">
 
-Further, the actual words used across the different grade-groups may be viewed in a word cloud: 
+The actual words used across the different grade-groups may be viewed in a word cloud: 
 
-<img src="https://github.com/jnels13/Screening-Childrens-Writing-Level-With-NLP/blob/main/Source%20Images/wc_0.png" width="370" height="258"> <img src="https://github.com/jnels13/Screening-Childrens-Writing-Level-With-NLP/blob/main/Source%20Images/wc_3.png" width="370" height="258">
+<img src="https://github.com/jnels13/Screening-Childrens-Writing-Level-With-NLP/blob/main/Source%20Images/wc_3.png">
 
-<img src="https://github.com/jnels13/Screening-Childrens-Writing-Level-With-NLP/blob/main/Source%20Images/wc_5.png" width="370" height="258"> <img src="https://github.com/jnels13/Screening-Childrens-Writing-Level-With-NLP/blob/main/Source%20Images/wc_9.png" width="370" height="258">
+The ten most frequent words per grade-group are visualized below: 
+<img src="https://github.com/jnels13/Screening-Childrens-Writing-Level-With-NLP/blob/main/Source%20Images/most_important.png">
 
-Themes repeat across grade-groups, such as "dog" and "cat" decreasing in frequency after the early grades, "time" growing in frequency through the different grade groups, and "mom" becoming "mother" in high school.  The repetition of words across grade groups from the youngest to the eldest students is also interesting. 
+When reviewing the following two preceding visualizations, themes repeat across grade-groups, such as "dog" and "cat" decreasing in frequency after the early grades, "time" growing in frequency through the different grade groups, and "mom" becoming "mother" in high school.  The repetition of words across grade groups from the youngest to the eldest students is also interesting. 
 
 ### Model Development
 
@@ -40,7 +41,7 @@ Standard preprocessing included tokenization of the texts, removal of English st
 
 #### Model Selection
 
-Three models were used: support-vector machine, random forest, and XG Boost. All models used RandomizedSearchCV to tune the parameters (parameter grids were further tweaked in edge cases), and a dummy classifier was used to evaluate the modes' performance over baseline. The models were run on each of the three "groups" of data to examine the efficacy of the models as the corpus size increased (from n=100, to n=188, to n=288). The data was applied to each model utilizing two strategies for categorizing the data: TF-IDF weighting and Word2vec vectorization.  SMOTE was used to account for class imbalance. 
+Three models were used: support-vector machine, random forest, and XG Boost. All models used RandomizedSearchCV to tune the parameters (parameter grids were further tweaked in edge cases), and a dummy classifier was used to evaluate the modes' performance over baseline. The models were run on each of the three "groups" of data to examine the efficacy of the models as the corpus size increased. The data was applied to each model utilizing two strategies for categorizing the data: TF-IDF weighting and Word2vec vectorization.  SMOTE was used to account for class imbalance. 
 
 ### Results
 

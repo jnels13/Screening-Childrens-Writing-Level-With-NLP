@@ -1,13 +1,10 @@
 import pandas as pd
 import numpy as np
 import nltk
-nltk.download('stopwords')
-nltk.download('wordnet')
-nltk.download('punkt')
 from nltk.corpus import stopwords
 from nltk import word_tokenize
-from nltk.stem.wordnet import WordNetLemmatizer
 import gensim
+import pickle
 
 # Function to average all word vectors in a paragraph (from https://www.kaggle.com/varun08/sentiment-analysis-using-word2vec)
 def featureVecMethod(words, model, num_features):
@@ -42,7 +39,7 @@ def getAvgFeatureVecs(reviews, model, num_features):
     return reviewFeatureVecs
 
 def preprocess_w2v(text):
-    pickle_in = open('../Tfidf_vect.pkl', 'rb') 
+    pickle_in = open('w2v_model.pkl', 'rb') 
     model = pickle.load(pickle_in)
     text2 = getAvgFeatureVecs(text, model, 300)
     return(text2)

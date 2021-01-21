@@ -1,5 +1,8 @@
 import pandas as pd 
 import numpy as np 
+from sklearn.ensemble import RandomForestClassifier
+from sklearn import model_selection, svm
+
 import pickle 
 from preprocess_tfidf import preprocess_tfidf
 from preprocess_w2v import preprocess_w2v
@@ -9,10 +12,10 @@ import streamlit as st
 from PIL import Image 
   
 # loading in the model to predict on the data 
-pickle_in = open('clf_xgb_tfidf.pkl', 'rb') 
-clf_xgb_tfidf = pickle.load(pickle_in) 
-pickle_in2 = open('clf_rf_w2v.pkl', 'rb') 
-clf_rf_w2v = pickle.load(pickle_in2) 
+pickle_in = open('clf_rf_tfidf.pkl', 'rb') 
+clf_rf_tfidf = pickle.load(pickle_in) 
+pickle_in2 = open('clf_svm_w2v.pkl', 'rb') 
+clf_svm_w2v = pickle.load(pickle_in2) 
 pickle_in3 = open('Encoder.pkl', 'rb')
 Encoder = pickle.load(pickle_in3)
   
@@ -26,21 +29,30 @@ def prediction(text):
     predict_me_tfidf = preprocess_tfidf(text2)
     predict_me_w2v = preprocess_w2v(text2)
 
-    prediction_tfidf = Encoder.inverse_transform(clf_xgb_tfidf.predict(predict_me_tfidf))
-    prediction_w2v = Encoder.inverse_transform(clf_rf_w2v.predict(predict_me_w2v))
+    prediction_tfidf = Encoder.inverse_transform(clf_rf_tfidf.predict(predict_me_tfidf))
+    prediction_w2v = Encoder.inverse_transform(clf_svm_w2v.predict(predict_me_w2v))
 
-    return prediction_tfidf, prediction_w2v
+    outcomes = [prediction_tfidf, prediction_w2v]
+
+    return outcomes
   
 # this is the main function in which we define our webpage  
 def main(): 
       # giving the webpage a title 
-    st.title("Grade-Level Prediction") 
+    #st.title("Grade-Level Prediction") 
       
     # here we define some of the front end elements of the web page like  
     # the font and background color, the padding and the text to be displayed 
     html_temp = """ 
     <div style ="background-color: #ABBAEA;padding:13px"> 
-    <h1 style ="color:black;text-align:center;">Student Grade Level Classifier ML App </h1> 
+    <h1 style ="color:black;text-align:center;">Student Grade Level Classifier </h1> 
+    <p> I created this app to ascertain the grade-level of a student essay, 
+    based upon a corpus of pre-labeled essays from grades K-12, comparing results of 
+    tf-idf weighting and Word2vec vectorizing. The corpus is limited, so essays are graded 
+    into groups, K-2, 3-4, 5-8, and 9-12. Code and contact info may be found on my github, 
+    github.com/jnels13. 
+    <p> The input essay should be typed or pasted into the text box below.
+
     </div> 
     """
       
@@ -59,7 +71,10 @@ def main():
     # and store it in the variable result 
     if st.button("Predict"): 
         result = prediction(text) 
-    st.success('The predicted grade level is: \n{} using tf-idf weighting and \n{} using Word2Vec vectorising'.format(result[0], result[1])) 
-     
+    try:
+        st.success('The predicted grade level is:  \nGrades {} using tf-idf weighting, and  \nGrades {} using Word2vec vectoring'.format(result[0], result[1])) 
+    except:
+        pass
+
 if __name__=='__main__': 
     main() 

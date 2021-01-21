@@ -12,8 +12,11 @@ from nltk import word_tokenize
 from nltk.stem.wordnet import WordNetLemmatizer
 
 def stopped_ (data):
-    stopwords_list = stopwords.words('english') #removing stopwords
+    stopwords_list = stopwords.words('english') 
     stopwords_list += list(string.punctuation)  #removing punctuation
+    data1 = [w.lower() for w in data]
+    data2 = [w for w in data1 if w not in set(stopwords_list)]  # remove stopwords
+    return(data2)
 
 def lemma_(data):
     lemmatizer = WordNetLemmatizer()

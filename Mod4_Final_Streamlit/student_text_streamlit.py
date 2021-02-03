@@ -70,7 +70,10 @@ def main():
     # the prediction function defined above is called to make the prediction  
     # and store it in the variable result 
     if st.button("Predict"): 
-        result = prediction(text) 
+        try:
+            result = prediction(text) 
+        except:
+            st.error('Your text was too short or did not otherwise work; please try again.')
     try:
         st.success('The predicted grade level is:  \nGrades {} using tf-idf weighting, and  \nGrades {} using Word2vec vectoring'.format(result[0], result[1])) 
     except:

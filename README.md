@@ -1,10 +1,12 @@
 **Update 02/02/2021:** Added BERT-based classifiers, experimented w/ bigrams (no significant improvement)<br>
 **Update 02/03/2021:** Revised BERT (used cased library) (mild improvement to accuracy of 62.069%)<br>
 **Future Work:** 
-<br>Add stacked of sparse model with dense features (like # of words and text length)
-<br>Incorporate work split between two notebooks (colab issue), including removal of common words across corpuses
-<br>Look for feature importances across all models
-<br>Implement most common model in Streamlit
+<ul>
+<li>Add stacked of sparse model with dense features (like # of words and text length)
+<li>Incorporate work split between two notebooks (colab issue), including removal of common words across corpuses
+<li>Look for feature importances across all models
+<li>Implement most common model in Streamlit
+</ul>
 
 # Applying Machine Learning to Assess Student Writing Level
 

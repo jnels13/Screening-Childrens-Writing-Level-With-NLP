@@ -1,3 +1,7 @@
+**Update 02/02/2021:** Added BERT-based classifiers, experimented w/ bigrams (no significant improvement)
+**Update 02/03/2021:** Revised BERT (used cased library) (mild improvement to accuracy of 62.069%)
+**Future Work:** Add stacked of sparse model with dense features (like # of words and text length)
+
 # Applying Machine Learning to Assess Student Writing Level
 
 This model is a proof-of-concept machine-learning model to assess student writing level based upon a corpus of previously categorized texts. Given the size of the available corpus and that some texts had been attributed to multiple grades, texts were grouped into the following grade-level categories: early elementary (k-2), middle-elementary (3-4), middle school (5-8) and high school (9-12). 

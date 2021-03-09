@@ -61,7 +61,7 @@ Texts may be pasted directly into the notebook, though this will soon be transfe
 **Future Work:** <ul>
 <li>Add stacked of sparse model with dense features (like # of words and text length)
 <li>Incorporate work split between two notebooks (colab issue), including removal of common words across corpuses
-<li>Look for feature importances across all models
+<li>Look for feature importances across all models and in stacking classifier
 <li>Implement most common model in Streamlit
 </ul>
 

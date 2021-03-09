@@ -1,4 +1,4 @@
-<img align="center" src="https://github.com/jnels13/NC_Litigation_Predictor/blob/main/images/NC_Litigation_Banner.JPG" width="auto" height="auto">
+<img align="center" src="https://github.com/jnels13/Screening-Childrens-Writing-Level-With-NLP/blob/main/Source%20Images/StudentWritingBanner.JPG" width="auto" height="auto">
 
 **Update 02/02/2021:** Added BERT-based classifiers, experimented w/ bigrams (no significant improvement)<br>
 **Update 02/03/2021:** Revised BERT (used cased library) (mild improvement to accuracy of 62.069%)<br>

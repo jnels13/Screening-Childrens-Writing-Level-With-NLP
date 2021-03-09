@@ -2,13 +2,6 @@
 
 **Update 02/02/2021:** Added BERT-based classifiers, experimented w/ bigrams (no significant improvement)<br>
 **Update 02/03/2021:** Revised BERT (used cased library) (mild improvement to accuracy of 62.069%)<br>
-<br>
-**Future Work:** <ul>
-<li>Add stacked of sparse model with dense features (like # of words and text length)
-<li>Incorporate work split between two notebooks (colab issue), including removal of common words across corpuses
-<li>Look for feature importances across all models
-<li>Implement most common model in Streamlit
-</ul>
 
 # Applying Machine Learning to Assess Student Writing Level
 
@@ -64,6 +57,13 @@ Performance of the models did not significantly change with increase in corpus s
 The best-performing model was the Random Forest using TF-IDF weights (60.92% Accuracy, 54.095 F1 score), and it clearly improved in performance as corpus size increased. It can correctly classify texts roughly twice as good as the baseline (34.483%). The best Word2vec model was SVM (51.724% accuracy, 48.871 F1 score).
 
 Texts may be pasted directly into the notebook, though this will soon be transferred to a stand-alone app.  Further work includes continuing to increase the corpus size as additional texts become available, and deploying to a stand-alone app. The source data should also be checked for potential bias in its origin, and thus, in its application; that goes beyond the scope of this initial developed model.
+
+**Future Work:** <ul>
+<li>Add stacked of sparse model with dense features (like # of words and text length)
+<li>Incorporate work split between two notebooks (colab issue), including removal of common words across corpuses
+<li>Look for feature importances across all models
+<li>Implement most common model in Streamlit
+</ul>
 
 ### Further Reading
 

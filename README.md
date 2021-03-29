@@ -2,6 +2,7 @@
 
 **Update 02/02/2021:** Added BERT-based classifiers, experimented w/ bigrams (no significant improvement)<br>
 **Update 02/03/2021:** Revised BERT (used cased library) (mild improvement to accuracy of 62.069%)<br>
+**To Do:** Add sentence-length feature and incorporate into models <br>
 
 # Applying Machine Learning to Assess Student Writing Level
 

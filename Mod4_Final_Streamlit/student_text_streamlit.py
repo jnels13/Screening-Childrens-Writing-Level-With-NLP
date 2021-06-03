@@ -5,6 +5,7 @@ from sklearn import model_selection, svm
 import nltk
 nltk.download('punkt')
 nltk.download('stopwords') 
+nltk.download('wordnet')
 
 import pickle 
 from preprocess_tfidf import preprocess_tfidf

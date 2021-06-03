@@ -2,6 +2,8 @@ import pandas as pd
 import numpy as np 
 from sklearn.ensemble import RandomForestClassifier
 from sklearn import model_selection, svm
+import nltk
+nltk.download('punkt')
 
 import pickle 
 from preprocess_tfidf import preprocess_tfidf

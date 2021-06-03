@@ -4,6 +4,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn import model_selection, svm
 import nltk
 nltk.download('punkt')
+nltk.download('stopwords') 
 
 import pickle 
 from preprocess_tfidf import preprocess_tfidf

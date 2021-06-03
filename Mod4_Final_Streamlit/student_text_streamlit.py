@@ -12,6 +12,7 @@ from PIL import Image
   
 # loading in the model to predict on the data 
 pickle_in = open('clf_rf_tfidf.pkl', 'rb') 
+                 'clf_rf_tfidf.pkl'
 clf_rf_tfidf = pickle.load(pickle_in) 
 pickle_in3 = open('Encoder.pkl', 'rb')
 Encoder = pickle.load(pickle_in3)
@@ -67,14 +68,14 @@ def main():
     # the prediction function defined above is called to make the prediction  
     # and store it in the variable result 
     if st.button("Predict"): 
-        try:
-            result = prediction(text) 
-        except:
-            st.error('Your text was too short or did not otherwise work; please try again.')
-    try:
+        # try:
+        result = prediction(text) # indent this back in when uncommenting
+    #     except:
+    #         st.error('Your text was too short or did not otherwise work; please try again.')
+    # try:
         st.success('The predicted grade level is:  \nGrades {} using tf-idf weighting and a random-forest model.'.format(result[0])) 
-    except:
-        pass
+    # except:
+    #     pass
 
 if __name__=='__main__': 
     main() 

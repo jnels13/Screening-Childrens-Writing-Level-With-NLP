@@ -12,7 +12,6 @@ from PIL import Image
   
 # loading in the model to predict on the data 
 pickle_in = open('clf_rf_tfidf.pkl', 'rb') 
-                 'clf_rf_tfidf.pkl'
 clf_rf_tfidf = pickle.load(pickle_in) 
 pickle_in3 = open('Encoder.pkl', 'rb')
 Encoder = pickle.load(pickle_in3)

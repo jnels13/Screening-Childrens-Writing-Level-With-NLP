@@ -51,16 +51,9 @@ Performance of the models did not significantly change with increase in corpus s
 
 <img src="https://github.com/jnels13/Screening-Childrens-Writing-Level-With-NLP/blob/main/Source%20Images/Accuracy_Scores.png">
 
-The best-performing model was the Random Forest using TF-IDF weights (60.92% Accuracy, 54.095 F1 score), and it clearly improved in performance as corpus size increased. It can correctly classify texts roughly twice as good as the baseline (34.483%). The best Word2vec model was SVM (51.724% accuracy, 48.871 F1 score).
+The best-performing model was the Random Forest using TF-IDF weights (64.368% Accuracy, 60.142 F1 score), and it clearly improved in performance as corpus size increased. It can correctly classify texts roughly three times as good as the baseline (20.690%). 
 
 Texts may be pasted directly into the notebook, though this will soon be transferred to a stand-alone app.  Further work includes continuing to increase the corpus size as additional texts become available, and deploying to a stand-alone app. The source data should also be checked for potential bias in its origin, and thus, in its application; that goes beyond the scope of this initial developed model.
-
-**Future Work:** <ul>
-<li>Add stacked of sparse model with dense features (like # of words and text length)
-<li>Incorporate work split between two notebooks (colab issue), including removal of common words across corpuses
-<li>Look for feature importances across all models and in stacking classifier
-<li>Implement most common model in Streamlit
-</ul>
 
 ### Further Reading
 

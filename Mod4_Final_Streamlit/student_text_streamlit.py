@@ -50,8 +50,10 @@ def main():
     based upon a corpus of pre-labeled essays from grades K-12, using the results of 
     tf-idf weighted texts and a random-forest model (this was the best-performing combination
     of several different models and weighting/vectorizing methods). The corpus is limited, 
-    so essays are graded into groups, K-2, 3-4, 5-8, and 9-12. Code and contact info may be 
-    found on my github, https://github.com/jnels13/Screening-Childrens-Writing-Level-With-NLP/
+    so essays are graded into groups, K-2, 3-4, 5-8, and 9-12, acting more as a proof-of-
+    concept, which can be further refind by the addition of addition texts in the future. 
+    
+    Code and contact info may be found on my github, <a href="https://github.com/jnels13/Screening-Childrens-Writing-Level-With-NLP/">HERE.</a>
     <p> The input essay should be typed or pasted into the text box below.
 
     </div> 

@@ -45,7 +45,9 @@ Four models were used: logistic regression, support-vector machine, random fores
 
 ### Results
 
-The best-performing model was the Random Forest using TF-IDF weights (64.368% Accuracy, 60.142 F1 score). It correctly classified texts roughly three times as well as the baseline (20.690% accuracy).  The final app is located <a href="https://share.streamlit.io/jnels13/screening-childrens-writing-level-with-nlp/main/Mod4_Final_Streamlit/student_text_streamlit.py"> HERE </a>.  
+The best-performing model was the Random Forest using TF-IDF weights (64.368% Accuracy, 60.142 F1 score). It correctly classified texts roughly three times as well as the baseline (20.690% accuracy).  
+
+#### The final app is located <a href="https://share.streamlit.io/jnels13/screening-childrens-writing-level-with-nlp/main/Mod4_Final_Streamlit/student_text_streamlit.py"> HERE </a>.  
 
 ### Future Work
 

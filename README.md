@@ -41,15 +41,11 @@ Standard preprocessing included tokenization of the texts, removal of English st
 
 #### Model Selection
 
-Three models were used: support-vector machine, random forest, and XG Boost. All models used RandomizedSearchCV to tune the parameters (parameter grids were further tweaked in edge cases), and a dummy classifier was used to evaluate the modes' performance over baseline. The models were run on each of the three "groups" of data to examine the efficacy of the models as the corpus size increased. The data was applied to each model utilizing two strategies for categorizing the data: TF-IDF weighting and Word2vec vectorization.  SMOTE was used to account for class imbalance. 
+Four models were used: logistic regression, support-vector machine, random forest, and XG Boost. All models used RandomizedSearchCV to tune the parameters (parameter grids were further tweaked in edge cases), and a dummy classifier was used to evaluate the modes' performance over baseline. The data was applied to each model utilizing two strategies for categorizing the data: TF-IDF weighting and Word2vec vectorization.  SMOTE was used to account for class imbalance. 
 
 ### Results
 
-Performance of the models did not significantly change with increase in corpus size (perhaps due to the still-limited size of the corpus), as indicated by the accuracy scores below:
-
-<img src="https://github.com/jnels13/Screening-Childrens-Writing-Level-With-NLP/blob/main/Source%20Images/Accuracy_Scores.png">
-
-The best-performing model was the Random Forest using TF-IDF weights (64.368% Accuracy, 60.142 F1 score), and it clearly improved in performance as corpus size increased. It can correctly classify texts roughly three times as good as the baseline (20.690%).  The final app is located <a href="https://share.streamlit.io/jnels13/screening-childrens-writing-level-with-nlp/main/Mod4_Final_Streamlit/student_text_streamlit.py"> HERE </a>.  
+The best-performing model was the Random Forest using TF-IDF weights (64.368% Accuracy, 60.142 F1 score). It correctly classified texts roughly three times as well as the baseline (20.690% accuracy).  The final app is located <a href="https://share.streamlit.io/jnels13/screening-childrens-writing-level-with-nlp/main/Mod4_Final_Streamlit/student_text_streamlit.py"> HERE </a>.  
 
 ### Future Work
 

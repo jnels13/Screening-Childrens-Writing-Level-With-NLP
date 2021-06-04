@@ -52,7 +52,7 @@ def main():
     of several different models and weighting/vectorizing methods). The corpus is limited, 
     so essays are graded into groups, K-2, 3-4, 5-8, and 9-12, acting more as a proof-of-concept, 
     which can be further refind by the addition of addition texts in the future. 
-    <p>Code and contact info may be found on my github, <a href="https://github.com/jnels13/Screening-Childrens-Writing-Level-With-NLP/">HERE.</a>
+    <p>Code and contact info may be found on my github, <a href="https://github.com/jnels13/Screening-Childrens-Writing-Level-With-NLP/" target="_blank">HERE.</a>
     <p> The input essay should be typed or pasted into the text box below.
 
     </div> 

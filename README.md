@@ -4,28 +4,24 @@ Try the final model on Streamlit <a href="https://share.streamlit.io/jnels13/scr
 
 # Applying Machine Learning to Assess Student Writing Level
 
-This model is a proof-of-concept machine-learning model to assess student writing level based upon a corpus of previously categorized texts. Given the size of the available corpus and that some texts had been attributed to multiple grades, texts were grouped into the following grade-level categories: early elementary (k-2), middle-elementary (3-4), middle school (5-8) and high school (9-12). 
+This model is a proof-of-concept machine-learning model to assess student-writing level based upon a corpus of previously categorized texts. Given the size of the available corpus and that some texts had been attributed to multiple grades, texts were grouped into the following grade-level categories: early elementary (k-2), middle-elementary (3-4), middle school (5-8) and high school (9-12). 
 
 The model is not a "grammar checker," and it is subject-matter agnostic. It only classifies a given text based upon a corpus of previously graded materials. The repository includes the notebook, the datasets described below, a high-level overview of the project (the PDF document), and the source images referenced herein. 
 
 ### About the dataset:
 
-Three datasets are used and referenced herein: 
-<br>> writingcsv.csv is the first corpus of texts from multiple sources (n=189)
-<br>> writingcsv2.csv is the single-source corpus targeted to meet the Common Core standards (n=100)
-<br>> writingcsv2_combined is the combined corpus (n=289)
-
-Writing samples in the dataset were obtained from several different sources and comprise many different types. Some sources had corrected obvious misspellings, so obvious misspellings were corrected in the remaining texts for consistency. Bibliographies from research papers were not included.  Sources varied, though the vast majority of texts were obtained from https://achievethecore.org (comprising the second set, n=100), https://k12.thoughtfullearning.com, and http://www.ttms.org. Licensure and copyright information for the texts may be viewed on each site. 
+The dataset, Combined.csv (n=289), is a combination from two sources. Writing samples in the dataset were obtained from several different sources and comprise many different types. Some sources had corrected obvious misspellings, so obvious misspellings were corrected in the remaining texts for consistency. Bibliographies from research papers were not included.  Sources varied, though the vast majority of texts were obtained from https://achievethecore.org (comprising the second set, n=100), https://k12.thoughtfullearning.com, and http://www.ttms.org. Licensure and copyright information for the texts may be viewed on each site. 
 
 ###  Initial Review of the Corpus
 
-Initial EDA revealed that the average number of words per text increased as grade level increased. Middle-school and high-school distributions were very close, as shown below, though high-school texts had broader dispersion, likely due to the different types of texts. 
+Initial EDA revealed that both the average number of words per text and the average word length increased as grade level increased. 
+
+As shown below, middle-school and high-school distributions were very close, though high-school texts had broader dispersion, likely due to the different types of texts:
 
 <img src="https://github.com/jnels13/Screening-Childrens-Writing-Level-With-NLP/blob/main/Source%20Images/3_numwords.png" width="592" height="413">
 
-Similarly, average word length per text was correlated with increase in grade level, in all three data-set groups. The differences were negligible, though less so in the second, single-source group.  After lemmatization and stop-word removal, the differences between the top two groupings (middle and high school) are nearly gone, though the differences between the lower grades remain largely the same.
+Similarly, average word length per text was correlated with increase in grade level, though the differences were negligible.  After lemmatization and stop-word removal, the differences between the top two groupings (middle and high school) are nearly gone, though the differences between the lower grades remain largely the same: 
 
-**Group 3 (Combination of Previous Two):** 
 <img src="https://github.com/jnels13/Screening-Childrens-Writing-Level-With-NLP/blob/main/Source%20Images/3_wordlen.png">
 
 The actual words used across the different grade-groups may be viewed in a word cloud: 

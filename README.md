@@ -1,5 +1,7 @@
 <img align="center" src="https://github.com/jnels13/Screening-Childrens-Writing-Level-With-NLP/blob/main/Source%20Images/StudentWritingBanner.JPG" width="auto" height="auto">
 
+Try the final model on Streamlit <a href="https://share.streamlit.io/jnels13/screening-childrens-writing-level-with-nlp/main/Mod4_Final_Streamlit/student_text_streamlit.py"> HERE </a>.  (Streamlit puts shared apps to bed after seven days, so you may have to wait a moment for it to load.)
+
 # Applying Machine Learning to Assess Student Writing Level
 
 This model is a proof-of-concept machine-learning model to assess student writing level based upon a corpus of previously categorized texts. Given the size of the available corpus and that some texts had been attributed to multiple grades, texts were grouped into the following grade-level categories: early elementary (k-2), middle-elementary (3-4), middle school (5-8) and high school (9-12). 
@@ -51,9 +53,11 @@ Performance of the models did not significantly change with increase in corpus s
 
 <img src="https://github.com/jnels13/Screening-Childrens-Writing-Level-With-NLP/blob/main/Source%20Images/Accuracy_Scores.png">
 
-The best-performing model was the Random Forest using TF-IDF weights (64.368% Accuracy, 60.142 F1 score), and it clearly improved in performance as corpus size increased. It can correctly classify texts roughly three times as good as the baseline (20.690%). 
+The best-performing model was the Random Forest using TF-IDF weights (64.368% Accuracy, 60.142 F1 score), and it clearly improved in performance as corpus size increased. It can correctly classify texts roughly three times as good as the baseline (20.690%).  The final app is located <a href="https://share.streamlit.io/jnels13/screening-childrens-writing-level-with-nlp/main/Mod4_Final_Streamlit/student_text_streamlit.py"> HERE </a>.  
 
-Texts may be pasted directly into the notebook, though this will soon be transferred to a stand-alone app.  Further work includes continuing to increase the corpus size as additional texts become available, and deploying to a stand-alone app. The source data should also be checked for potential bias in its origin, and thus, in its application; that goes beyond the scope of this initial developed model.
+### Future Work
+
+Future work includes growing the corpus, potentially classifying text using both the tf-idf weights AND the dense, traditional factors such as word and text length.  The source data should also be checked for potential bias in its origin, and thus, in its application; that goes beyond the scope of this initial developed model.
 
 ### Further Reading
 
